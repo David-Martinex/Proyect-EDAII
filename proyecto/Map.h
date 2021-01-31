@@ -44,7 +44,7 @@ void Map_Delete( MapPtr this );
 bool Map_Insert( MapPtr this, char nombre[], Station* city );
 
 
-City* Map_Retrieve( MapPtr this, char nombre[]);
+Station* Map_Retrieve( MapPtr this, char nombre[]);
 
 
 size_t Map_Len( MapPtr this );

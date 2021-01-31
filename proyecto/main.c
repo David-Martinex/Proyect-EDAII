@@ -63,7 +63,7 @@ void menu( DataManager* dm )
 
 void loadGraph( DataManager* dm )
 {
-    if ( DLL_Len( dm->cities ) > 0 ){
+    if ( DLL_Len( dm->stations ) > 0 ){
         printf("\t\n\n===>!!Error¡¡\n=>Grafo precargado\n\n");
         return;
     }
@@ -89,7 +89,7 @@ void loadGraph( DataManager* dm )
 
 void loadGraphDB  ( DataManager* dm )
 {
-    if ( DLL_Len( dm->cities ) > 0 ){
+    if ( DLL_Len( dm->stations ) > 0 ){
         printf("\t\n\n===>!!Error¡¡\n=>Grafo precargado\n\n");
         return;
     }

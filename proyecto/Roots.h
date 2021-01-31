@@ -13,7 +13,7 @@ typedef struct Axis{
 
 }Axis;
 
-Axis* Axis_New( City* first, City* last, size_t weight);
+Axis* Axis_New( Station* first, Station* last, size_t weight);
 
 void Ax_To_String( Axis* this, char str[], size_t len );
 

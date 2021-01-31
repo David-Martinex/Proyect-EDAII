@@ -29,7 +29,7 @@ bool DM_Add_Station( DataManager* this, char name[] );
 
 bool DM_Add_StationRoot( DataManager* this, char name1[], char name2[], size_t weight );
 
-City* DM_Find_Station( DataManager* this, char name[] );
+Station* DM_Find_Station( DataManager* this, char name[] );
 
 void DM_Get_StationList( DataManager* this, void* ptrArr[] );
 
