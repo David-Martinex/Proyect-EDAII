@@ -1,10 +1,15 @@
 #include "DLL.h"
 
+//================================================================
+//==================={  Funciones Privadas }======================
+//================================================================
 
-/*-------------------------------------------------------------------
- *  funciones privadas!!
- *-----------------------------------------------------------------*/
-
+/**
+ * @brief 
+ * 
+ * @param value 
+ * @return Node* 
+ */
 static Node* newNode( Item value )
 {
 	Node* n = ( Node* ) malloc( sizeof ( Node ) );
@@ -30,15 +35,10 @@ Node* findNode (  DLL* this, Item value ){
 	return NULL;
 }
 
-/*-------------------------------------------------------------------
- *  Funciones públicas (operaciones) !!
- *-----------------------------------------------------------------*/
+//================================================================
+//==================={  Funciones Publicas }======================
+//================================================================
 
-/**
- * @brief Crea una nueva lista
- *
- * @return Referencia a la nueva lista; NULL en caso de error
- */
 DLL* DLL_New()
 {
 	DLL* p = ( DLL* ) malloc( sizeof( DLL ) );
@@ -51,11 +51,6 @@ DLL* DLL_New()
 	return p;
 }
 
-/**
- * @brief Destruye una lista
- *
- * @param this Referencia al objeto que se quiere destruir
- */
 void DLL_Delete( DLL* this )
 {
 	assert( this );
@@ -101,10 +96,8 @@ bool DLL_RemoveFront( DLL* this, Item* value )
 	assert( this );
 
 	if( NULL == this->first ) return false;
-	// lista vacía
 
 	*value = this->first->info;
-	// guardamos los datos antes de borrar al nodo
 
 	if( this->first == this->last ){
 		free( this->first );
@@ -161,13 +154,6 @@ bool DLL_RemoveNode(  DLL* this, Item value)
 	return false;
 }
 
-/**
- * @brief Indica si una lista está vacía o no
- *
- * @param this Referencia a un objeto tipo DLL
- *
- * @return true si la lista está vacía; false en caso contrario
- */
 bool DLL_IsEmpty (DLL* this)
 {
 	assert( this );
@@ -175,13 +161,6 @@ bool DLL_IsEmpty (DLL* this)
 	return this->first == NULL ? true : false;
 }
 
-/**
- * @brief Purga (limpia) una lista. 
- * Esta función no elimina la lista. Si lo que se desea es eliminarla,
- * entonces use a la función \see DLL_Delete()
- *
- * @param this Referencia a un objeto tipo DLL
- */
 void DLL_Purge( DLL* this )
 {
 	assert( this );
@@ -213,12 +192,6 @@ bool DLL_Peek( DLL* this, Item* value )
 	return true;
 }
 
-
-/*
-*	@brief Guarda la direccion de los objetos en un arreglo.
-*	@param this Referencia a la lista.
-*	@param ptrArr Arreglo donde se guardaran las direcciones.
-*/
 void DLL_GetInformation( DLL* this, void* ptrArr[] ){
 	assert( this );
 	if( DLL_IsEmpty( this ) ) { return; }	
