@@ -13,8 +13,8 @@
 #include "Entry.h"
 #include "Map.h"
 
-void G_Best_Route(City* origen, City* destino, DLL* cities, DLL* axis, char path[], size_t len);
+void G_Best_Route(Station* origen, Station* destino, DLL* stations, DLL* roots, char path[], size_t len);
 
-void Add_Cities( DLL* cities, MapPtr vertices);
+void Add_Cities( DLL* stations, MapPtr vertices);
 
-#endif   /* ----- #ifndef graph_INC  ----- */
+#endif   /* ----- #ifndef Graph_INC  ----- */
