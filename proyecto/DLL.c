@@ -186,7 +186,6 @@ bool DLL_Peek( DLL* this, Item* value )
 	assert( this );
 
 	if( NULL == this->first ) return false;
-	// lista vacía
 
 	*value = this->first->info;
 	return true;
