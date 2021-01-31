@@ -19,8 +19,8 @@ DataBase* DataBase_New();
 
 void DataBase_Delete( DataBase* this ); 
 
-bool DB_Save_Information( DataBase* this, DLL* dll, DLL* axis );
+bool DB_Save_Information( DataBase* this, DLL* dll, DLL* roots );
 
-bool DB_Recover_Information( DataBase* this, DLL* dll, DLL* axis );
+bool DB_Recover_Information( DataBase* this, DLL* dll, DLL* roots );
 
 #endif   /* ----- #ifndef DataBaseManager_INC  ----- */

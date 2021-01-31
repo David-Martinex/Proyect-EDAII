@@ -1,5 +1,9 @@
 #include "DataBase.h"
 
+/**=============================================================== 
+ * ======================{ METODOS PRIVADOS }=====================
+ * ===============================================================*/
+
 /**
 *  @brief Salva los datos de los vecinos de una ciudad.
 *  @param this Referencia a DataBase.
@@ -188,8 +192,9 @@ int callback_weight(  void* data, int argc, char** argv, char** col_name ){
     return 0;
 }
 
-
-
+/**=============================================================== 
+ * ======================{ METODOS PUBLICOS }=====================
+ * ===============================================================*/
 
 /**
 *	@brief Inicializa la clase, recuperará datos preexistentes en caso de haber.
