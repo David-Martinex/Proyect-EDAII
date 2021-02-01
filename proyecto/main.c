@@ -75,15 +75,15 @@ void loadGraph( DataManager* dm )
     DM_Add_Station( dm, "E" );
     DM_Add_Station( dm, "T" );
     
-    DM_ADD_StationRoot( dm, "S", "B", 4 );
-    DM_ADD_StationRoot( dm, "s", "c", 2 );
-    DM_ADD_StationRoot( dm, "B", "C", 3 );
-    DM_ADD_StationRoot( dm, "B", "D", 5 );
-    DM_ADD_StationRoot( dm, "C", "E", 10);
-    DM_ADD_StationRoot( dm, "C", "D", 8 );
-    DM_ADD_StationRoot( dm, "D", "E", 3 );
-    DM_ADD_StationRoot( dm, "D", "T", 6 );
-    DM_ADD_StationRoot( dm, "E", "T", 3 );
+    DM_Add_StationRoots( dm, "S", "B", 4 );
+    DM_Add_StationRoots( dm, "s", "c", 2 );
+    DM_Add_StationRoots( dm, "B", "C", 3 );
+    DM_Add_StationRoots( dm, "B", "D", 5 );
+    DM_Add_StationRoots( dm, "C", "E", 10);
+    DM_Add_StationRoots( dm, "C", "D", 8 );
+    DM_Add_StationRoots( dm, "D", "E", 3 );
+    DM_Add_StationRoots( dm, "D", "T", 6 );
+    DM_Add_StationRoots( dm, "E", "T", 3 );
 
 }
 
@@ -110,7 +110,7 @@ void addNewStation( DataManager* dm )
 {
     printf("\n==>Nombre de la Estacion:\n$");
     char chain[ MAX_TAM ];
-    scanf("s", &chain[ 0 ] );
+    scanf("%s", &chain[ 0 ] );
     DM_Add_Station( dm, chain );
 }
 
@@ -128,7 +128,7 @@ void addNewRoot( DataManager* dm )
     size_t d;
     scanf("%ld", &d );
 
-    DM_Add_StationRoot( dm, name1, name2, d );
+    DM_Add_StationRoots( dm, name1, name2, d );
 }
 
 void printStations( DataManager* dm )
