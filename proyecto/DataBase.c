@@ -5,10 +5,10 @@
  * ===============================================================*/
 
 /**
-*  @brief Salva los datos de los vecinos de una ciudad.
+*  @brief Salva los datos de los vecinos de una estacion.
 *  @param this Referencia a DataBase.
-*  @param c Referencia a un objeto City.
-*  @param axis Referencia a una DLL de tipos Axis.
+*  @param s Referencia a un objeto Station.
+*  @param roots Referencia a una DLL de nuestras rutas.
 */
 void neighborsSave( DataBase* this, Station* s, DLL* roots ){
 	size_t listLen = DLL_Len( s->neighbors );
@@ -44,8 +44,6 @@ void neighborsSave( DataBase* this, Station* s, DLL* roots ){
         char str[ 12 ];
 
         sprintf(str, "%ld", a->weight);
-
-
 		strcat( chain, "INSERT INTO roots ( origen, destino, peso ) VALUES  ( '" );
 		strcat( chain, s->name );
 		strcat( chain, "' , '" );
@@ -66,7 +64,6 @@ void neighborsSave( DataBase* this, Station* s, DLL* roots ){
    		} else{
 	      	fprintf( stdout, "[roots] Data has been inserted!\n" );
    		}
-
 	}
 }
 
@@ -75,6 +72,14 @@ void neighborsSave( DataBase* this, Station* s, DLL* roots ){
 *	@param this Referencia a el objeto DataBase.
 *	@param dll Referencia a una DLL.
 */
+
+/**
+ * @brief Recorre una lista de nodos para guardarlos en la DB.
+ * 
+ * @param this Referencia a el objeto DataBase.
+ * @param dll Referencia a una DLL.
+ * @param roots Referencia a una DLL que guardara rutas.
+ */
 void nodesSave( DataBase* this, DLL* dll, DLL* roots ){
 	size_t listLen = DLL_Len( dll );
 	void* nodesList[ listLen ];
@@ -196,10 +201,6 @@ int callback_weight(  void* data, int argc, char** argv, char** col_name ){
  * ======================{ METODOS PUBLICOS }=====================
  * ===============================================================*/
 
-/**
-*	@brief Inicializa la clase, recuperará datos preexistentes en caso de haber.
-*	@return Apuntador a un objeto.
-*/
 DataBase* DataBase_New(){
 	DataBase* db = ( DataBase* )malloc( sizeof( DataBase ) );
 
@@ -216,10 +217,6 @@ DataBase* DataBase_New(){
 	return db;
 }
 
-/**
-*	@brief Destructor del objeto DataBase.
-*	@param Referencia a un objeto DataBase,
-*/
 void DataBase_Delete( DataBase* this ){
 	assert( this );
 
@@ -231,13 +228,7 @@ void DataBase_Delete( DataBase* this ){
 	free( this );
 }
 
-/**
-*	@brief Salva la informacion de los vertices en su repectiva BD.
-*	@param this Referencia a la base de datos.
-*	@param dll Referencia a una DLL con las ciudades a guardar.
-*	@return true Si se ha salvado informacion con éxito
-*/
-bool DB_Save_Information( DataBase* this, DLL* dll, DLL* axis ){
+bool DB_Save_Information( DataBase* this, DLL* dll, DLL* roots ){
 	char* sql ="CREATE TABLE Stations( " 
                "name TEXT PRIMARY KEY NOT NULL ); "
                
@@ -258,18 +249,11 @@ bool DB_Save_Information( DataBase* this, DLL* dll, DLL* axis ){
    	} else{
       	fprintf( stdout, "Tabla creada!\n" );
    	}
-   	nodesSave( this, dll, axis );
+   	nodesSave( this, dll, roots );
 
 	return true;
 }
 
-/**
-*	@brief Recobra información y la guarda en una DLL. En caso de estar vaciá
-*	la BD el la DLL apuntara a NULL
-*	@param this Referencia a un objeto DataBase.
-*	@param dll Referencia a una DLL donde se guardaran vértices recuperados.
-*	@return true Si se recuperó con éxito.
-*/
 bool DB_Recover_Information( DataBase* this, DLL* dll, DLL* roots ){
 	
 	char* sql = "SELECT * FROM Stations;";

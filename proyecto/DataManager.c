@@ -5,7 +5,7 @@
  * ===============================================================*/
 
 /**
-*	@brief Guarda la lista de ciudades en una base de datos SQL.
+*	@brief Guarda la lista de estaciones en una base de datos SQL.
 *	@param this Referecia a un objeto DataManager.
 *	@return true Si se tuvo éxito al guardar.
 *	@return false Si falló el guardado.
@@ -16,7 +16,7 @@ bool save_Data( DataManager* this )
 }
 
 /**
-*	@brief Carga ciudades guardadas en una base de datos SQL.
+*	@brief Carga estaciones guardadas en una base de datos SQL.
 *	@param this Referencia a un objeto DataManager.
 *	@return true Si se recupero con éxito la información.
 *	@return false Si falló la recuperación.
@@ -27,7 +27,7 @@ bool recover_Data( DataManager* this )
 }
 
 /**
-*	@brief Asigna la lista de vecinos de una tipo City a su respectivo tipo Axis.
+*	@brief Asigna la lista de vecinos de una tipo Station a su respectivo tipo Roots.
 *	@param this Referencia al objeto DataManager.
 */
 void roots_Asigment( DataManager* this, Station* c1, Station* c2, size_t weight )
@@ -40,10 +40,6 @@ void roots_Asigment( DataManager* this, Station* c1, Station* c2, size_t weight 
  * ======================{ METODOS PUBLICOS }=====================
  * ===============================================================*/
 
-/**
-*	@brief Constructor del objeto DataManager, también carga la DB.
-*	@return dm Referencia a el objeto DataManager.
-*/
 DataManager* DataManager_New()
 {
 	DataManager* dm = ( DataManager* )malloc( sizeof( DataManager ) );

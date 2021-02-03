@@ -89,9 +89,9 @@ void G_Best_Route(  Station* origen, Station* destino, DLL* stations, DLL* roots
 }																						///la mejor ruta y el costo final
 
 /**
- * @brief Inserta todos los nodos (cities) en la tabla.
+ * @brief Inserta todos los nodos (Station) en la tabla.
  *
- * @param cities        Referencia a una DLL que contiene objetos City.
+ * @param cities        Referencia a una DLL que contiene objetos Station.
  * @param vertices      Referencia a un objeto Map.
  */
 void Add_Stations( DLL* stations, MapPtr vertices )
