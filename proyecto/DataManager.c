@@ -10,7 +10,8 @@
 *	@return true Si se tuvo éxito al guardar.
 *	@return false Si falló el guardado.
 */
-bool save_Data( DataManager* this ){
+bool save_Data( DataManager* this )
+{
 	return DB_Save_Information( this->dataBase, this->stations, this->roots /*Redefinir si es necesario*/ );
 }
 
@@ -20,7 +21,8 @@ bool save_Data( DataManager* this ){
 *	@return true Si se recupero con éxito la información.
 *	@return false Si falló la recuperación.
 */
-bool recover_Data( DataManager* this ){
+bool recover_Data( DataManager* this )
+{
 	return DB_Recover_Information( this->dataBase, this->stations, this->roots );
 }
 
@@ -28,7 +30,8 @@ bool recover_Data( DataManager* this ){
 *	@brief Asigna la lista de vecinos de una tipo City a su respectivo tipo Axis.
 *	@param this Referencia al objeto DataManager.
 */
-void roots_Asigment( DataManager* this, Station* c1, Station* c2, size_t weight ){
+void roots_Asigment( DataManager* this, Station* c1, Station* c2, size_t weight )
+{
 	Roots* a = Roots_New( c1, c2, weight);
 	DLL_InsertBack( this->roots, a );
 }
@@ -97,8 +100,10 @@ void DataManager_Delete( DataManager* this )
 *	@brief Carga información previa de una DB.
 *	@param this Referencia a un objeto DataManager.
 */
-void DM_LoadInformation( DataManager* this ){ 	recover_Data( this ); }
-
+void DM_LoadInformation( DataManager* this )
+{ 	
+	recover_Data( this ); 
+}
 
 /**
 *	@brief Guarda la lista de direcciones de los vértices City.
@@ -107,14 +112,18 @@ void DM_LoadInformation( DataManager* this ){ 	recover_Data( this ); }
 *	debe tener el tamagno de numero de ciudades en DLL cities. Usar método
 *	DLL_Len() 	
 */
-void DM_Get_StationList( DataManager* this, void* ptrArr[] ){ DLL_GetInformation( this->stations, ptrArr ); }
+void DM_Get_StationList( DataManager* this, void* ptrArr[] )
+{ 
+	DLL_GetInformation( this->stations, ptrArr ); 
+}
 
 /**
 *	@brief Imprime la lista de ciudades hasta el momento almacenadas en la DLL
 *	cities.
 *	@param this Referencia al objeto DataManager.
 */
-void DM_Print_StationsList( DataManager* this ){
+void DM_Print_StationsList( DataManager* this )
+{
 	size_t dllSize = DLL_Len( this->stations ); 
 
 	void* ptrArr[ dllSize ];
@@ -129,7 +138,8 @@ void DM_Print_StationsList( DataManager* this ){
 *	@brief Imprime la lista de Axis almacenadas en su respectiva DLL.
 *	@param this Referencia a una a un objeto DataManager.
 */
-void DM_Print_RootsList( DataManager* this ){
+void DM_Print_RootsList( DataManager* this )
+{
 	size_t rootsSize = DLL_Len( this->roots );
 
 	void* ptrArr[ rootsSize ];
@@ -151,7 +161,8 @@ void DM_Print_RootsList( DataManager* this ){
 *	@return true Si se añadio con éxito.
 *	@return false Si falló o no se encontraron las ciudades.
 */
-bool DM_Add_Station( DataManager* this, char name[] ){
+bool DM_Add_Station( DataManager* this, char name[] )
+{
 	Station* c = Station_New( name );
 	return DLL_InsertBack( this->stations, c );
 }
@@ -162,7 +173,8 @@ bool DM_Add_Station( DataManager* this, char name[] ){
 *	@param direction Apuntador a ciudad donde se guardara coincidencia de búsqueda
 *	@return Referencia a una ciudad si la encontro, NULL en caso contrario.
 */
-Station* DM_Find_Station( DataManager* this, char name[] ){
+Station* DM_Find_Station( DataManager* this, char name[] )
+{
 	size_t cLen = DLL_Len( this->stations );
 	void* cList[ cLen ];
 
@@ -187,7 +199,8 @@ Station* DM_Find_Station( DataManager* this, char name[] ){
 *	@return true Si se añadio con éxito.
 *	@return false Si falló o no se encontraron las ciudades.
 */
-bool DM_Add_StationRoots( DataManager* this, char name1[], char name2[], size_t weight ){
+bool DM_Add_StationRoots( DataManager* this, char name1[], char name2[], size_t weight )
+{
 	Station* c1 = DM_Find_Station( this, name1 );
 	Station* c2 = DM_Find_Station( this, name2 );
 	if( c1 == NULL || c2 == NULL ){ return false; }
@@ -209,7 +222,8 @@ bool DM_Add_StationRoots( DataManager* this, char name1[], char name2[], size_t 
 *	@param path Cadena donde se guardará la mejor ruta.
 *	@param len Tama?o de path.s
 */
-void DM_Obtain_Best_Path( DataManager* this, char name1[], char name2[], char path[], size_t len ){
+void DM_Obtain_Best_Path( DataManager* this, char name1[], char name2[], char path[], size_t len )
+{
 	Station* o = DM_Find_Station( this, name1 );
 	Station* d = DM_Find_Station( this, name2 );
 
