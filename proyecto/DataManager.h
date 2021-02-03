@@ -12,13 +12,6 @@
 #include "Roots.h"
 #include "Graph.h"
 
-/**
- * @brief Declaramos un tipo Abstracto constituido por atributos 2 
- * Listas Doblemente Enlazadas denomidas stations y roots que guardaran
- * la informacion necesaria para nuestro programa.
- * Tambien hacemos referencia a un Objeto DataBase
- * 
- */
 typedef struct DataManager
 {
     DLL* stations;
@@ -26,10 +19,6 @@ typedef struct DataManager
     DataBase* dataBase;
 } DataManager;
 
-/**
-*	@brief Constructor del objeto DataManager, también carga la DB.
-*	@return dm Referencia a el objeto DataManager.
-*/
 DataManager* DataManager_New();
 
 void DataManager_Delete( DataManager* this );

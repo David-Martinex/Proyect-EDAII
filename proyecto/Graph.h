@@ -25,6 +25,6 @@ typedef struct Graph
 
 void G_Best_Route(Station* origen, Station* destino, DLL* stations, DLL* roots, char path[], size_t len);
 
-void Add_Stations( DLL* stations, MapPtr vertices);
+void Add_Cities( DLL* stations, MapPtr vertices);
 
 #endif   /* ----- #ifndef Graph_INC  ----- */

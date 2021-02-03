@@ -1,1 +1,0 @@
-gcc -Wall -std=c99 -o salida.out main.c DataManager.c DataBase.c DLL.c Graph.c Station.c Roots.c Map.c sqlite3.o -ldl -lpthread && ./salida.out

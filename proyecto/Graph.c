@@ -30,7 +30,7 @@ void G_Best_Route(  Station* origen, Station* destino, DLL* stations, DLL* roots
 	size_t menor_peso = 1000, best_neighbor = 0, peso_final = 0;
 	Station* start;
 
-	Add_Stations( stations, vertices);							///Se agregan todas los nodos (ciudades) al mapa
+	Add_Cities( stations, vertices);							///Se agregan todas los nodos (ciudades) al mapa
 	start = Map_Retrieve( vertices, origen->name);  ///Se hace la busqueda del nodo origen en el mapa
 	DLL* queue = DLL_New();
 	DLL_InsertBack(queue, start);							///Se inserta el nodo origen en una cola
@@ -89,12 +89,12 @@ void G_Best_Route(  Station* origen, Station* destino, DLL* stations, DLL* roots
 }																						///la mejor ruta y el costo final
 
 /**
- * @brief Inserta todos los nodos (Station) en la tabla.
+ * @brief Inserta todos los nodos (cities) en la tabla.
  *
- * @param cities        Referencia a una DLL que contiene objetos Station.
+ * @param cities        Referencia a una DLL que contiene objetos City.
  * @param vertices      Referencia a un objeto Map.
  */
-void Add_Stations( DLL* stations, MapPtr vertices )
+void Add_Cities( DLL* stations, MapPtr vertices )
 {
 	size_t listLen = DLL_Len( stations );
 
