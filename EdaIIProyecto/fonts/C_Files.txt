@@ -1,8 +1,0 @@
-./src/Axis.c
-./src/DataBase.c
-./src/DLL.c
-./src/Map.c
-./src/Executable.c
-./src/graph.c
-./src/City.c
-./src/DataManager.c

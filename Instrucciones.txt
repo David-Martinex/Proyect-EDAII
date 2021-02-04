@@ -1,0 +1,11 @@
+Instrucciones a seguir:
+Bienvenido usuario estas sera la libreria que deberas de instalar para hacer uso de
+codigo:
+Para Paralelizar:
+
+Para Json:
+sudo apt-get install libjson-c-dev
+
+Una vez realizado lo anterior el comando para ejecutar sera el siguiente siempre y cuando
+se encuentre ubicado desde la terminal en la carpeta "proyecto" que contiene los codigos:
+gcc -Wall -std=c99 -o salida.out main.c DataBase.c DataManager.c DLL.c Graph.c Map.c Roots.c Station.c DataJson.c sqlite3.o -ldl -lpthread -ljson-c && ./salida.out
