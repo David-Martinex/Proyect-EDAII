@@ -45,8 +45,7 @@ void menu( DataManager* dm )
 				"5) Añadir eje entre estaciones.\n"
 				"6) Imprimir lista de estaciones.\n"
 				"7) Imprimir lista de ejes.\n"
-                "8) Cargar grafo del archivo .json\n"
-                "9) Serializar estaciones y rutas.\n"
+                "8) Serializar estaciones y rutas.\n"
 				"$ "
 
 			);
@@ -60,8 +59,7 @@ void menu( DataManager* dm )
 			case 5: addNewRoot   ( dm ); break;
 			case 6: printStations( dm ); break;
 			case 7: printRoots   ( dm ); break;
-            case 8: loadGraphJson( dm ); break;
-            case 9: serialize    ( dm ); break;
+            case 8: serialize    ( dm ); break;
 			default: printf("FUERA DE RANGO\n"); break;
 		}
 	}
@@ -101,16 +99,6 @@ void loadGraphDB( DataManager* dm )
     }
 
     DM_LoadInformation( dm );
-}
-
-void loadGraphJson( DataManager* dm )
-{
-    if ( DLL_Len( dm->stations ) > 0 ){
-        printf("\t\n\n===>!!Error¡¡\n=>Grafo precargado\n\n");
-        return;
-    }
-
-    DM_LoadInformation_Json( dm );
 }
 
 void getBestPath  ( DataManager* dm )

@@ -107,8 +107,6 @@ void DataManager_Delete( DataManager* this )
 */
 void DM_LoadInformation( DataManager* this ){ 	recover_Data( this ); }
 
-void DM_LoadInformation_Json( DataManager* this ){ DataJson_Deserialize( this->dataJson, this->stations, this->roots );}
-
 /**
 *	@brief Guarda la lista de direcciones de los vértices Station.
 *	@param this Referencia al objeto DataManager.

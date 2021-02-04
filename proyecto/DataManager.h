@@ -37,8 +37,6 @@ void DataManager_Delete( DataManager* this );
 
 void DM_LoadInformation( DataManager* this );
 
-void DM_LoadInformation_Json( DataManager* this );
-
 bool DM_Add_Station( DataManager* this, char name[] );
 
 bool DM_Add_StationRoots( DataManager* this, char name1[], char name2[], size_t weight );

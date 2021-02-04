@@ -49,8 +49,4 @@ void DataJson_Delete( DataJson* file );
  */
 void DataJson_Serialize( void** stations, size_t n_stations, void** roots, size_t n_roots );
 
-void DataJson_Deserialize( DataJson* file, DLL* stations, DLL* roots );
-
-void DataJson_Add_neigbors( DLL* stations, DLL* roots);
-
 #endif   /* ----- #ifndef DataJson_INC  ----- */
