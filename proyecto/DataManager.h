@@ -1,6 +1,17 @@
 #ifndef DataManager_INC
 #define DataManager_INC
-
+/**
+ * @file DataManager.h
+ * @brief Modulo del Tipo Abstracto denominado DataManager donde declaramos los componentes
+ * y atributos del Tipo Abstracto y tambien tenemos sus metodos publicos que son de interes
+ * para el usuario. Tambien la funcion de este Tipo Abstracto es manejar las bases de datos 
+ * y los archivos de los cuales se rescatara la informacion.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <assert.h>
 #include <string.h>
 #include <stdio.h>

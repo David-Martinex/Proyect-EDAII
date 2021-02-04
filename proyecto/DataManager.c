@@ -1,3 +1,12 @@
+/**
+ * @file DataManager.c
+ * @brief Modulo que se encarga de realizar todas las operaciones 
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "DataManager.h"
 
 /**=============================================================== 
