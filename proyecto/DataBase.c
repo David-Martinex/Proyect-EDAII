@@ -1,12 +1,15 @@
 /**
  * @file DataBase.c
- * @brief 
+ * @brief Se encargara de contener las definiciones y procedimientos a realizar
+ * relacionados con el tipo Abstracto DataBase.
  * @version 0.1
  * @date 2021-02-04
  * 
  * @copyright Copyright (c) 2021
  * 
  */
+
+/**Para tener acceso a nuestra estructura y los prototipos de DataBase.h*/
 #include "DataBase.h"
 
 /**=============================================================== 
