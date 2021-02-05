@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['g_5fadd_5fstation_929',['G_Add_Station',['../_graph_8c.html#a9a7acc5eeaa70a0207ca6bd4f39f7ef9',1,'G_Add_Station(DLL *stations, MapPtr vertices):&#160;Graph.c'],['../_graph_8h.html#a9a7acc5eeaa70a0207ca6bd4f39f7ef9',1,'G_Add_Station(DLL *stations, MapPtr vertices):&#160;Graph.c']]],
+  ['g_5fbest_5froute_930',['G_Best_Route',['../_graph_8c.html#a1bcb3eef9df3b3ad16943550cab0b4df',1,'G_Best_Route(Station *origen, Station *destino, DLL *stations, DLL *roots, char path[], size_t len):&#160;Graph.c'],['../_graph_8h.html#a1bcb3eef9df3b3ad16943550cab0b4df',1,'G_Best_Route(Station *origen, Station *destino, DLL *stations, DLL *roots, char path[], size_t len):&#160;Graph.c']]],
+  ['g_5fbest_5froute_5fquick_931',['G_Best_Route_Quick',['../_graph_8c.html#a1e1855e74fe129f84d9213d062d5413d',1,'G_Best_Route_Quick(Station *origen, Station *destino, DLL *stations, DLL *roots, char path[], size_t len):&#160;Graph.c'],['../_graph_8h.html#a1e1855e74fe129f84d9213d062d5413d',1,'G_Best_Route_Quick(Station *origen, Station *destino, DLL *stations, DLL *roots, char path[], size_t len):&#160;Graph.c']]],
+  ['gcc_5fversion_932',['GCC_VERSION',['../sqlite3_8c.html#adbba0f726fc66d7100916c683b7568ae',1,'sqlite3.c']]],
+  ['get2byte_933',['get2byte',['../sqlite3_8c.html#a54c839cb25c8e144fa5b8d8959a1d840',1,'sqlite3.c']]],
+  ['get2bytealigned_934',['get2byteAligned',['../sqlite3_8c.html#a2aa8a6762e8632453843e72f731e409e',1,'sqlite3.c']]],
+  ['get2bytenotzero_935',['get2byteNotZero',['../sqlite3_8c.html#acb5be77e01b4562f47bed669d0c99038',1,'sqlite3.c']]],
+  ['get4byte_936',['get4byte',['../sqlite3_8c.html#ad45c36cb6dcc01158438a66014a133c7',1,'sqlite3.c']]],
+  ['get_5fautocommit_937',['get_autocommit',['../structsqlite3__api__routines.html#a3bba0c59be3759e884be9f1651c86eef',1,'sqlite3_api_routines']]],
+  ['get_5fauxdata_938',['get_auxdata',['../structsqlite3__api__routines.html#ab28cd00ff8781bd11dad4cc9e36c78e5',1,'sqlite3_api_routines']]],
+  ['get_5ftable_939',['get_table',['../structsqlite3__api__routines.html#a26519b89594fca7ab6970dd5b92b8038',1,'sqlite3_api_routines']]],
+  ['getbestpath_940',['getBestPath',['../main_8c.html#a293273c6f714f3016422080430fae3da',1,'main.c']]],
+  ['getinteger_941',['getInteger',['../main_8c.html#a1beca5011e3c9de56618c06ef575b1e2',1,'main.c']]],
+  ['getpid_942',['GETPID',['../shell_8c.html#a7619c450d37a313aec4406af35c363ac',1,'shell.c']]],
+  ['getvarint_943',['getVarint',['../sqlite3_8c.html#a2abb01bd1a223b05224c0c799b07d422',1,'sqlite3.c']]],
+  ['getvarint32_944',['getVarint32',['../sqlite3_8c.html#a20c8e1bb19173aadc361de2e7487bf3b',1,'sqlite3.c']]],
+  ['getvarint32nr_945',['getVarint32NR',['../sqlite3_8c.html#ae362e263a75c4a0f176aeab7ab54730d',1,'sqlite3.c']]],
+  ['global_946',['GLOBAL',['../sqlite3_8c.html#ab2cd20d9321c782db91b9414da0c23ee',1,'sqlite3.c']]],
+  ['global_5frecover_947',['global_recover',['../structsqlite3__api__routines.html#a918aa1cd34b7573aac518d595026e3aa',1,'sqlite3_api_routines']]],
+  ['graph_948',['Graph',['../struct_graph.html',1,'Graph'],['../_graph_8h.html#a0c94bbeb31bba748d2897a168f62e9bc',1,'Graph():&#160;Graph.h']]],
+  ['graph_2ec_949',['Graph.c',['../_graph_8c.html',1,'']]],
+  ['graph_2eh_950',['Graph.h',['../_graph_8h.html',1,'']]],
+  ['gray_951',['GRAY',['../_station_8h.html#a7ff5f2dff38e7639981794c43dc9167ba3fb6c4ad00f4ad98553e01229d1803ac',1,'Station.h']]]
+];
