@@ -93,14 +93,14 @@ void loadGraph( DataManager* dm )
     DM_Add_Station( dm, "F" );
     
     DM_Add_StationRoots( dm, "A", "B", 4 );
-    DM_Add_StationRoots( dm, "A", "C", 5 );
-    DM_Add_StationRoots( dm, "B", "C", 6 );
-    DM_Add_StationRoots( dm, "B", "D", 7 );
-    DM_Add_StationRoots( dm, "C", "E", 8);
-    DM_Add_StationRoots( dm, "C", "D", 9 );
-    DM_Add_StationRoots( dm, "D", "E", 10 );
-    DM_Add_StationRoots( dm, "D", "F", 11 );
-    DM_Add_StationRoots( dm, "E", "F", 12 );
+    DM_Add_StationRoots( dm, "A", "C", 2 );
+    DM_Add_StationRoots( dm, "B", "C", 1 );
+    DM_Add_StationRoots( dm, "B", "D", 5 );
+    DM_Add_StationRoots( dm, "C", "E", 10 );
+    DM_Add_StationRoots( dm, "C", "D", 8 );
+    DM_Add_StationRoots( dm, "D", "E", 2 );
+    DM_Add_StationRoots( dm, "D", "F", 6 );
+    DM_Add_StationRoots( dm, "E", "F", 2 );
 
 }
 

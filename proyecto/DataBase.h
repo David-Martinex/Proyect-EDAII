@@ -2,9 +2,7 @@
 #define  DataBase_INC
 /**
  * @file DataBase.h
- * @brief Se encargara de guardar nuestra estructura que compone a nuestro Tipo
- * abtsracto DataBase, tambien los prototipos de los metodos relacionados con
- * este Tipo Abstracto.  
+ * @brief Contiene nuestra estructura DataBase y prototipos de sus metodos.
  * @version 0.1
  * @date 2021-02-04
  * 

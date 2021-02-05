@@ -1,15 +1,30 @@
 #ifndef  MAP_INC
 #define  MAP_INC
 
+/**
+ * @file Map.h
+ * @brief Contiene la estructura y prototipos de los metodos relazionados con Map.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+/***/
 #include <stdlib.h>
+/***/
 #include <stdio.h>
+/**Para usar asserts*/
 #include <assert.h>
+/**Para utilizar bool*/
 #include <stdbool.h>
 #include <iso646.h>
 #include <stdint.h>
 #include <string.h>
 
+/**Para usar la Estructura Entry*/
 #include "Entry.h"
+/**Para usar Station y sus metodos*/
 #include "Station.h"
 
 typedef size_t (*pHash)(char key[], size_t max);

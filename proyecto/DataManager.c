@@ -1,6 +1,6 @@
 /**
  * @file DataManager.c
- * @brief Modulo que se encarga de realizar todas las operaciones 
+ * @brief Contiene el codigo a ejecutar de los metodos relacionados con DataManager.
  * @version 0.1
  * @date 2021-02-04
  * 
@@ -261,6 +261,12 @@ void DM_Serialize( DataManager* this ){
     DataJson_Serialize(stationsList, dllSize, rootsList, rootsSize);
 }
 
+/**
+ * @brief Funcion que se encargara de recuperar las rutas guardadas en DataManager y
+ * que primera las ordenara y depues buscara una ruta en especifico. 
+ * 
+ * @param this Referencia a un Objeto DataManager
+ */
 void DM_Search( DataManager* this ) {
 	size_t rootsSize = DLL_Len(this->roots);
 
@@ -280,6 +286,7 @@ void DM_Search( DataManager* this ) {
 	scanf("%lu", &key );
 
 	Roots* find = BinarySearchR(roots, 0, rootsSize-1, key);
+
 	if( find != NULL){
 		printf("\n==>Se encontro la ruta con el peso especificado.\n\n");
 		Ro_Print( find );

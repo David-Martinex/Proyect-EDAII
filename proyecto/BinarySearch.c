@@ -1,3 +1,13 @@
+/**
+ * @file BinarySearch.c
+ * @brief Contiene el codigo del metodo BinarySearchR para hacer busqueda binaria recursiva.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+/**Para acceder a BinarySearch.h*/
 #include "BinarySearch.h"
 
 Roots* BinarySearchR(Roots **list, size_t inf, size_t sup, size_t key) 

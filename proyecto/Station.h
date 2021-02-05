@@ -1,12 +1,21 @@
 #ifndef  Station_INC
 #define  Station_INC
-
+/**
+ * @file Station.h
+ * @brief Contiene la estructura de Station y los prototipos de los metodos relazionados con esta.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <string.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
 
+/** Para usar Listas Doblemente Enlazadas*/
 #include "DLL.h"
 
 enum

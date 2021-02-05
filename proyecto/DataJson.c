@@ -1,7 +1,6 @@
 /**
  * @file DataJson.c
- * @brief Se encarga de ejecutar Metodos relacionados con el tipo Abstracto denominado
- * DataJson.
+ * @brief Contiene los codigos a ejecutar de los metodos relaionados con DataJson.
  * @version 0.1
  * @date 2021-02-04
  * 

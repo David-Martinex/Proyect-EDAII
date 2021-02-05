@@ -2,8 +2,7 @@
 #define  DataJson_INC
 /**
  * @file DataJson.h
- * @brief Se encarga de tener a disposicion los prototipos de los metedos relacionados con
- * y la estructura de DataJson.
+ * @brief Contiene la estructura de DataJson y sus metodos.
  * @version 0.1
  * @date 2021-02-04
  * 
@@ -15,10 +14,12 @@
 #include <stdbool.h>
 #include <assert.h>
 #include <string.h>
-#include <json-c/json.h>
 
+/**Para usar Station y sus METODOS*/
 #include "Station.h"
+/**Para usar Roots y sus METODOS*/
 #include "Roots.h"
+/**Para usar DLL y sus METODOS*/
 #include "DLL.h"
 
 /**

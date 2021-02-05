@@ -1,7 +1,6 @@
 /**
  * @file DataBase.c
- * @brief Se encargara de contener las definiciones y procedimientos a realizar
- * relacionados con el tipo Abstracto DataBase.
+ * @brief Contiene el codigo a ejecutar de nuestros metodos relacionados con DataBase.
  * @version 0.1
  * @date 2021-02-04
  * 

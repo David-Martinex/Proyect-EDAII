@@ -1,6 +1,15 @@
 #ifndef  Graph_INC
 #define  Graph_INC
 
+/**
+ * @file Graph.h
+ * @brief Contiene La estructura Graph y los prototipos de los metodos relacionados con esta.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <string.h>
 #include <stdbool.h>
 #include <stdlib.h>

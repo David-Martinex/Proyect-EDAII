@@ -2,10 +2,7 @@
 #define DataManager_INC
 /**
  * @file DataManager.h
- * @brief Se encarga de los Tipos Abstracto denominados DataManager donde inicializaremos y 
- * tambien tenemos sus metodos publicos que son de interes para el usuario. 
- * Tambien la funcion de este Tipo Abstracto es manejar todos nuestrs tipos Abstractos y
- * sus metodos.
+ * @brief Contiene la estructura de DataManager y sus metodos publicos.
  * @version 0.1
  * @date 2021-02-04
  * 
@@ -32,9 +29,11 @@
 #include "Graph.h"
 /**Para hacer uso de Tipos Abstractos DataJson( Manejo de Arhivos.json) y sus metodos*/
 #include "DataJson.h"
-
+/**Para hacer uso de la funcion QuickSort*/
 #include "QuickSort.h"
+/**Para hacer uso de la funcion BinarySearchR*/
 #include "BinarySearch.h"
+
 /** 
  * @struct DataManager
  * @brief estructura encargada de llevar los datos de la aplicación.

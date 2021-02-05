@@ -1,23 +1,29 @@
 #ifndef  DLL_INC
 #define  DLL_INC
-
+/**
+ * @file DLL.h
+ * @brief Contiene la Estructura de Node y de DLL y sus metodos relacionados con estos. 
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <stdlib.h>
 #include <stdio.h>
+/**Para usar asserts*/
 #include <assert.h>
+/**Para usar booleanos*/
 #include <stdbool.h>
 
+/**Para usar Station y sus metodos*/
 #include "Station.h"
 
 typedef void* Item;
 
 /**
- * @brief declaramos un tipo Abtsracto denominado Node que servira como nodo para ir 
- * insertando en nuestras DLL(Listas DOblemente Enlazadas).
- * Entre sus atributos se encuentra Item el cual se puede adaptar al tipo abstracto, tipo primitivo, etc. con 
- * el que se encuentre, esto nos sera muy util para guardar nuestros tipos abstractos.
- * Tambien tendra entre sus atributos Nodes denomidados next y prev, los
- * cuales guardaran la direccion de los nodos que le siguen o que se encuentran antes
- * de el.
+ * @brief Tipo Abstracto Node que guadara una infor y la direccion de los nodos que se encauentran
+ * antes o despues.
  * 
  */
 typedef struct Node
@@ -29,16 +35,8 @@ typedef struct Node
 } Node;
 
 /**
- * @brief declaramos un tipo Abstracto denominado DLL (Lista Doblemente Enlazada) que
- * estara compuesta por Nodes.
- * Entre sus atributos se encuentra:
- * - 3 Nodes donde:
- * -first y last se encargaran de indicarnos
- * los extremos de nuestra DLL, de lo contraria perderiamos todo control sobre nuestra
- * DLL y perderiamos la memoria en bano sin posibilidad de interactuar con la DLL.
- * -Un Node cursor que es libre de moverse por toda la DLL
- * y un size_t len que nos servira para saber cuantos elementos tenemos en nuestra 
- * DLL.
+ * @brief Lista Doblemente enlazada, contiene la direccion de su primer nodo, ultimo nodo
+ * un cursor que se puede mover libremente por la lista y la cantidad de elementos guardados.
  */
 typedef struct DLL
 {

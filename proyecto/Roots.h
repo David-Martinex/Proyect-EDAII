@@ -1,6 +1,14 @@
 #ifndef  Roots_INC
 #define  Roots_INC
-
+/**
+ * @file Roots.h
+ * @brief Contiene la estructura de Roots y prototipos de los metodos relacionados con Roots.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "Station.h"
 
 #include <assert.h>

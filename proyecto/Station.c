@@ -1,3 +1,12 @@
+/**
+ * @file Station.c
+ * @brief Contiene el codio a ejecutar de los metodos de Station.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "Station.h"
 
 /**
@@ -126,24 +135,16 @@ void ST_To_String( Station* this, char chain[], size_t len ){
 	snprintf( chain, len - 1,
 		"Name: %s\n"
 		"Color: %s\n"
-		"Distance: %ld\n"
-		"Predecesor: %s\n"
-		"DTime %ld\n"
-		"FTime %ld\n"
 		"Neighbors: %s\n",
 		this->name,
-		color,
-		this->distance,
-		this->predecesor, 
-		this->discoveryTime,
-		this->finishTime,
+		color, 
 		neighbors
 	);
 }
 
 /**
  * @brief Imprime en consola un objeto Station.
- * @param this referencia a la estacion a imprir.
+ * @param this referencia a la estacion a imprimir.
  */
 void ST_Print( Station* this ){ 
 	char str[256];

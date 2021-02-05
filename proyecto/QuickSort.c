@@ -1,3 +1,12 @@
+/**
+ * @file QuickSort.c
+ * @brief Contiene los codigos a ejecutar de los metodos de QuickSort.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "QuickSort.h"
 
 void swap(Roots* val1, Roots* val2) {

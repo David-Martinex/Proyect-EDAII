@@ -1,3 +1,12 @@
+/**
+ * @file Map.c
+ * @brief Contiene los codigos a ejecutarse de los metodos relacionados con Map.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "Map.h"
 
 /**

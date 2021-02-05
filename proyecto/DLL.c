@@ -1,3 +1,12 @@
+/**
+ * @file DLL.c
+ * @brief contiene los metodos de Node y de DLL.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "DLL.h"
 
 //================================================================
