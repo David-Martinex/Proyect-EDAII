@@ -1,6 +1,15 @@
 #ifndef  DataJson_INC
 #define  DataJson_INC
-
+/**
+ * @file DataJson.h
+ * @brief Se encarga de tener a disposicion los prototipos de los metedos relacionados con
+ * y la estructura de DataJson.
+ * @version 0.1
+ * @date 2021-02-04
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

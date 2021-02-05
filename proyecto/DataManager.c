@@ -48,6 +48,10 @@ void roots_Asigment( DataManager* this, Station* c1, Station* c2, size_t weight 
 	DLL_InsertBack( this->roots, a );
 }
 
+void recovered_weigth_quick(void** rootsList)
+{
+	
+}
 /**=============================================================== 
  * ======================{ METODOS PUBLICOS }=====================
  * ===============================================================*/
@@ -159,7 +163,7 @@ void DM_Print_RootsList( DataManager* this ){
 }
 
 /**
-*	@brief Agega un eje con direccion a la ciudad con name1 a la ciudad
+*	@brief AgegOa un eje con direccion a la ciudad con name1 a la ciudad
 *	con nombre name2, el metodo valida que las ciudades esten en la lista.
 *	@param this Referencia a un objeto DataManager.
 * 	@param name1 Nombre de la primer ciudad.
@@ -255,4 +259,32 @@ void DM_Serialize( DataManager* this ){
     DLL_GetInformation( this->roots, rootsList );
 
     DataJson_Serialize(stationsList, dllSize, rootsList, rootsSize);
+}
+
+void DM_Search( DataManager* this ) {
+	size_t rootsSize = DLL_Len(this->roots);
+
+	void* rootsList[rootsSize];
+	DLL_GetInformation(this->roots, rootsList);
+
+	Roots** roots = (Roots **) rootsList;
+
+	QuickSort(roots, 0, rootsSize-1 );
+
+	for( size_t i = 0; i < rootsSize; i += 2){
+		Ro_Print( roots[i] );
+	}
+
+	size_t key;
+	printf("Indique los minutos de la ruta a buscar:\n$");
+	scanf("%lu", &key );
+
+	Roots* find = BinarySearchR(roots, 0, rootsSize-1, key);
+	if( find != NULL){
+		printf("\n==>Se encontro la ruta con el peso especificado.\n\n");
+		Ro_Print( find );
+	} else {
+		printf("\n==>No se encontró ruta con el peso específicado.\n\n");
+	}
+
 }

@@ -25,6 +25,7 @@ void addNewRoot   ( DataManager* dm );
 void printStations( DataManager* dm );
 void printRoots   ( DataManager* dm );
 void serialize    ( DataManager* dm );
+void sortRoots    ( DataManager* dm );
 
 int main()
 {
@@ -56,6 +57,7 @@ void menu( DataManager* dm )
 				"6) Imprimir lista de estaciones.\n"
 				"7) Imprimir lista de ejes.\n"
                 "8) Serializar estaciones y rutas.\n"
+                "9) Buscar ruta.\n"
 				"$ "
 
 			);
@@ -70,6 +72,7 @@ void menu( DataManager* dm )
 			case 6: printStations( dm ); break;
 			case 7: printRoots   ( dm ); break;
             case 8: serialize    ( dm ); break;
+            case 9: sortRoots    ( dm ); break;
 			default: printf("FUERA DE RANGO\n"); break;
 		}
 	}
@@ -90,14 +93,14 @@ void loadGraph( DataManager* dm )
     DM_Add_Station( dm, "F" );
     
     DM_Add_StationRoots( dm, "A", "B", 4 );
-    DM_Add_StationRoots( dm, "A", "C", 2 );
-    DM_Add_StationRoots( dm, "B", "C", 3 );
-    DM_Add_StationRoots( dm, "B", "D", 5 );
-    DM_Add_StationRoots( dm, "C", "E", 10);
-    DM_Add_StationRoots( dm, "C", "D", 8 );
-    DM_Add_StationRoots( dm, "D", "E", 3 );
-    DM_Add_StationRoots( dm, "D", "F", 6 );
-    DM_Add_StationRoots( dm, "E", "F", 3 );
+    DM_Add_StationRoots( dm, "A", "C", 5 );
+    DM_Add_StationRoots( dm, "B", "C", 6 );
+    DM_Add_StationRoots( dm, "B", "D", 7 );
+    DM_Add_StationRoots( dm, "C", "E", 8);
+    DM_Add_StationRoots( dm, "C", "D", 9 );
+    DM_Add_StationRoots( dm, "D", "E", 10 );
+    DM_Add_StationRoots( dm, "D", "F", 11 );
+    DM_Add_StationRoots( dm, "E", "F", 12 );
 
 }
 
@@ -158,4 +161,9 @@ void printRoots( DataManager* dm )
 void serialize( DataManager* dm)
 {
     DM_Serialize( dm );
+}
+
+void sortRoots( DataManager* dm ) 
+{
+    DM_Search( dm );
 }
